@@ -1,6 +1,12 @@
+:root {--margin-gutter: 10px; }
+
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+.container {
+  margin: var(--margin-gutter);
 }
 
 .header {
@@ -12,12 +18,14 @@
 .section {
   height: 50vh;
   display: flex;
+  margin: var(--margin-gutter) 0;
 }
 
 .aside {
   height: 100%;
   flex: 1;
   background: #FDE74C;
+  margin-right: var(--margin-gutter);
 }
 
 .article {
@@ -30,14 +38,16 @@
 }
 
 .article__top {
-  height: 50%;
+  height: calc(50% - 5px);
   flex-basis: 100%;
   background: #FA7921;
+  margin-bottom: calc(var(--margin-gutter) / 2);
 }
 
 .article__bot {
-  height: 50%;
+  height: calc(50% - 5px);
   flex-basis: 100%;
+  margin-top: calc(var(--margin-gutter) / 2);
   background: #e55934;
   display: flex;
   justify-content: space-around;
@@ -65,6 +75,8 @@
   }
   .aside {
     flex: 1;
+    margin-right: 0;
+    margin-bottom: var(--margin-gutter);
   }
   .article {
     flex: 2;
